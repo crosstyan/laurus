@@ -1,0 +1,23 @@
+# Track text only (notes, plan, tools, logs, manifests). Images, dumps, firmware,
+# schematics and ramdisk extracts stay out of git.
+*
+!*/
+!.gitignore
+!*.md
+!*.txt
+!*.log
+!*.xml
+!*.py
+!*.sh
+!SHA256SUMS
+analysis/rd*/
+.DS_Store
+# raw boot captures (hundreds of MB); summaries go in notes
+logs/losboot-*/
+!kernel/*.patch
+!kernel/*.config
+
+# Public tree: raw unit dumps (serial/IMEI/MAC) and vendor files stay local.
+logs/
+artifacts/
+misc/vendor_compare/*.xml
